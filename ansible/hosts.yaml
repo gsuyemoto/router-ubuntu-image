@@ -1,0 +1,5 @@
+all:
+  hosts:
+    jetson:
+      ansible_host: /home/gary/Documents/workspace-router/jetson-nano-image-v2/rootfs
+      ansible_executable: /bin/bash

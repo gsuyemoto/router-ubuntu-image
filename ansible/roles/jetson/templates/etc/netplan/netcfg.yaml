@@ -1,0 +1,13 @@
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    eth0:
+      dhcp4: true
+    # this is key for netplan and isc-dhcp-server to work together,
+    # isc-dhcp-server needs to know that the wlan0 is attached to a certain ip
+    # BUT! If you try to set more options here it will prevent isc-dhcp-server from working
+    # a FINE line indeed...
+    wlan0:
+      addresses:
+        - 10.0.0.1/24

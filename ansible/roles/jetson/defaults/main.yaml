@@ -1,0 +1,10 @@
+---
+ubuntu_release: focal
+
+new_user:
+  vars_prompt:
+    - name: pass
+      prompt: Enter the user password
+  name: gary
+  shell: /bin/bash
+  password: {{ pass }}
